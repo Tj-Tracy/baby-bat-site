@@ -1,0 +1,16 @@
+.toolbar {
+  background: var(--main-color);
+  justify-content: left;
+  border-top: 1px dotted white;
+}
+
+.toolbar-item {
+  padding: 0 5px  5px 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.toolbar-item:hover {
+  background: var(--toolbar-hover);
+  cursor: pointer;
+} 

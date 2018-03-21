@@ -1,0 +1,40 @@
+.ag-header-cell {
+  background: var(--secondary-color);
+  font-family: var(--header-font);
+  color: black;
+  font-weight: bold;
+  text-decoration: italic;
+  border: none !important;
+}
+
+
+.ag-body-viewport {
+  background: var(--secondary-color);
+  border: none;
+}
+
+.ag-row-even {
+  background: var(--secondary-color) !important;
+}
+
+.ag-row-odd {
+  background: #fddd83 !important;
+}
+
+.ag-cell {
+  border: none !important;
+}
+
+.ag-bl {
+  border: none !important;
+}
+
+.parse-title {
+  color: var(--main-color);
+  background: var(--secondary-color);
+  font-size: 25px;
+  padding: 10px;
+  padding-top: 30px;
+  font-family: var(--header-font);
+  font-weight: bold;
+}

@@ -1,0 +1,27 @@
+.parse-list {
+  background: var(--secondary-color);
+  width: 90%;
+}
+
+.parse-list > ul {
+  list-style-type: none;
+}
+
+.parse-list > ul > a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-family: var(--body-font);
+  font-weight: bold;
+}
+
+.parse-list > ul > a:hover {
+  color: var(--link-hover);
+}
+
+.parse-list > ul > a:visited {
+  color: var(--link-hover);
+}
+
+.upload-time {
+  color: #c40c8a44;
+}
