@@ -14,3 +14,12 @@
   background: var(--toolbar-hover);
   cursor: pointer;
 } 
+
+.user-menu {
+  background: var(--main-color);
+  border-top: 1px dotted white;
+}
+
+.nav {
+ justify-content: start;
+}

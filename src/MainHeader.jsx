@@ -40,7 +40,7 @@ class MainHeader extends Component {
           <Link to="/">
             <img src={batIcon} style={{ height: 80, width: 80 }} />{" "}
           </Link>
-          <h1>GOOD LUCK BABY BAT USER: {this.state.user}</h1>
+          <h1>GOOD LUCK BABY BAT</h1>
         </div>
         <div className="sub-header">
           <ToolbarMenu />

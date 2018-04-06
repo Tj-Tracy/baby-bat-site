@@ -87,9 +87,11 @@ class LoginBox extends Component {
       .then(data => {
         console.log(data);
         localStorage.setItem('jwtToken', data.jwtToken);
+        window.location.reload();
       })
       .catch(err => {
         console.log(err);
+        this.setState({error: "Login Failed"});
       });
 
     this.setState({ error: null });
