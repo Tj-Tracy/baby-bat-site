@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import ParseList from "./ParseList";
 import ParseView from "./ParseView";
 import MainHeader from "./MainHeader";
+import LoginBox from "./LoginBox";
+
 import "./css/MainMenu.css";
 import "./css/base.css";
 import ToolbarMenu from "./ToolbarMenu";

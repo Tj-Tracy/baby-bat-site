@@ -37,7 +37,7 @@ class ParseView extends Component {
         ).map(row => {
           return {
             ...row,
-            DPS: parseFloat(row.DPS) ? parseFloat(row.DPS) : 0,
+            DPS: parseFloat(row.DPS, 2) ? parseInt(row.DPS) : 0,
             Damage: parseFloat(row.Damage),
             Job: row.Job == "[object Object]" ? "" : row.Job,
             Deaths:
