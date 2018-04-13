@@ -12,12 +12,11 @@ class MainHeader extends Component {
   }
 
   componentWillMount() {
-    console.log(localStorage.getItem("jwtToken"));
     fetch("/api/whois", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("jwtToken")}`
+        Authorization: `Bearer ${localStorage.getItem("jwt")}`
       }
     })
       .then(response => {
@@ -25,9 +24,8 @@ class MainHeader extends Component {
         return response.json();
       })
       .then(data => {
-        console.log(data);
+        console.log(data)
         this.setState({ user: data.username });
-        console.log(this.state.user);
       })
       .catch(err => {
         console.log(err);

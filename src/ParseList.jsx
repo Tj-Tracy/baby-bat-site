@@ -11,8 +11,12 @@ const overlaySettings = {
     backgroundColor: "rgba(255, 255, 255, 0.25)"
   },
   content: {
-    bottom: "auto",
-    backgroundColor: "white"
+    bottom: "10vh",
+    top: "10vh",
+    right: "10vh",
+    left: "10vh",
+    backgroundColor: "var(--secondary-color)",
+    border: "1px var(--main-color) solid"
   }
 };
 
@@ -95,6 +99,7 @@ class ParseList extends Component {
       JSON.stringify(body)
     )
       .then(response => {
+        console.log(response);
         return response.json();
       })
       .then(data => {

@@ -85,20 +85,23 @@ class LoginBox extends Component {
         return response.json();
       })
       .then(data => {
-        console.log(data);
-        localStorage.setItem('jwtToken', data.jwtToken);
+        if(data.success === false) {
+          this.setState({error: "Incorrect username or password"});
+          return;
+        }
+        localStorage.setItem('jwt', data.jwt);
         window.location.reload();
       })
       .catch(err => {
         console.log(err);
-        this.setState({error: "Login Failed"});
+        this.setState({error: "Login failed"});
       });
 
     this.setState({ error: null });
   };
 
   render() {
-    if (localStorage.getItem('jwtToken')) {
+    if (localStorage.getItem('jwt')) {
       return null;
     }
     if (this.state.login === false) {
@@ -146,7 +149,6 @@ class LoginBox extends Component {
             <a
               className="link"
               onClick={() => {
-                console.log("hi");
                 this.setState({ login: !this.state.login, error: null });
               }}
             >
@@ -202,7 +204,6 @@ class LoginBox extends Component {
               className="link"
               onClick={() => {
                 this.setState({ login: !this.state.login, error: null });
-                console.log(this.state.login);
               }}
             >
               Register

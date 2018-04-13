@@ -21,17 +21,22 @@ class UploadMenu extends Component {
 
 
   render() {
+
+    if(localStorage.getItem('jwt') === null) {
+      return (
+        <div>please login before adding parses</div>
+      );
+    }
     return (
       
       <div className="flex-outer flex-column flex-center title-bar">
-        title:
+        <div>Title:</div>
         <input className="flex-inner" type="text" name="title" onChange={this.handleChange} />
         <textarea
           className="flex-inner"
           onChange={this.handleChange}
           name="upload"
-          placeholder="Place the raw xml here cause I'm too lazy do a proper file upload"
-          style={{ height: 600 }}
+          placeholder="Place the raw xml here"
         >
         </textarea>
         <button className="btn flex-inner" onClick={() => this.props.uploadParse(this.state.upload, this.state.title)}>upload</button>

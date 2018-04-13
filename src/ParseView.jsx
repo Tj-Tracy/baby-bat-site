@@ -14,7 +14,6 @@ class ParseView extends Component {
       columnDefs: this.constructCollumns(),
       title: null
     };
-    console.log("hi");
   }
 
   componentWillMount() {
@@ -22,7 +21,6 @@ class ParseView extends Component {
       method: "GET"
     })
       .then(response => {
-        console.log(response);
         if (response.ok === true) {
           return response.json();
         } else {
@@ -44,7 +42,6 @@ class ParseView extends Component {
               row.Name === "Jun Elco" ? (row.Deaths = 0) : parseInt(row.Deaths)
           };
         });
-        console.log(newTable);
         this.setState({
           rowData: newTable
         });

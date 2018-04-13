@@ -8,7 +8,7 @@ class ToolbarMenu extends Component {
   }
 
   logout() {
-    localStorage.removeItem("jwtToken");
+    localStorage.removeItem("jwt");
     window.location.reload();
   }
 
@@ -20,11 +20,11 @@ class ToolbarMenu extends Component {
             <div>Parses</div>
           </Link>
           <Link className="toolbar-item" to="/profiles">
-            <div>Member Profiles</div>
+            <div>Profiles</div>
           </Link>
           <div className="toolbar-item">Baby Bat's Baby Blog</div>
         </div>
-        {localStorage.getItem("jwtToken") !== null ? (
+        {localStorage.getItem("jwt") !== null ? (
           <a className="toolbar-item" onClick={() => this.logout()}>
             Logout
           </a>

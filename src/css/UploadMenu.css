@@ -1,4 +1,14 @@
 .title-bar {
   font-size: 30px;
   font-family: var(--header-font);
+  justify-content: left;
+}
+
+.title-bar > textarea, input {
+  border: 1px var(--main-color) solid;
+  background: var(--secondary-color);
+}
+
+.title-bar > textarea {
+  height: 350px;
 }
