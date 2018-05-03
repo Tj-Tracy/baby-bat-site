@@ -5,6 +5,7 @@ import ParseView from "./ParseView";
 import ParseList from "./ParseList";
 import Home from "./Home";
 import ProfileList from "./ProfileList";
+import Voting from "./Voting";
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
             <Route exact path="/parse/:parseId" component={ParseView} />
             <Route exact path="/parseList" component={ParseList} />
             <Route exact path="/profiles" component={ProfileList} />
+            <Route exact path="/voting" component={Voting} />
           </div>
         </Router>
       </div>
